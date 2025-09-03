@@ -1,27 +1,160 @@
 <!doctype html>
 <html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Portfolio - Trang Huỳnh</title>
-    <style>
-      body { font: 16px/1.6 system-ui, sans-serif; margin: 40px; }
-      .wrap { max-width: 760px; margin: 0 auto; }
-      h1 { font-size: 32px; margin-bottom: 0.2em; }
-      .muted { color: #666; }
-      a { text-decoration: none; }
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>Xin chào, mình là Trang Huỳnh 👋</h1>
-      <p class="muted">Đây là portfolio cá nhân trên GitHub Pages.</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trang Huỳnh — Portfolio</title>
+  <meta name="description" content="Portfolio cá nhân của Trang Huỳnh: dự án, kỹ năng, kinh nghiệm và liên hệ." />
+  <meta property="og:title" content="Trang Huỳnh — Portfolio" />
+  <meta property="og:description" content="Dự án, kỹ năng, kinh nghiệm và liên hệ." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="#home">
+    <img src="assets/avatar.svg" alt="Ảnh đại diện" class="avatar">
+    <span>Trang Huỳnh</span>
+  </a>
+  <nav class="nav">
+    <a href="#projects">Dự án</a>
+    <a href="#experience">Kinh nghiệm</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
+  <button class="theme-toggle" aria-label="Đổi giao diện" title="Đổi giao diện">🌓</button>
+</header>
 
-      <h2>Liên hệ</h2>
-      <ul>
-        <li>Email: thanhtrang.huynh146@gmail.com</li>
-        <li>GitHub: <a href="https://github.com/httrang146" target="_blank">httrang146</a></li>
-      </ul>
+<main id="home">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Xin chào 👋 Mình là <span class="accent">Trang Huỳnh</span></h1>
+      <p>Tập trung vào xây dựng sản phẩm gọn nhẹ, dễ dùng. Đây là portfolio nơi mình tổng hợp những dự án tiêu biểu, kỹ năng và cách liên hệ.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#projects">Xem dự án</a>
+        <a class="btn" href="mailto:thanhtrang.huynh146@gmail.com">Email mình</a>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/httrang146">GitHub</a>
+      </div>
     </div>
-  </body>
+    <div class="hero-art">
+      <img src="assets/hero.svg" alt="Minh họa hero">
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-head">
+      <h2>Dự án nổi bật</h2>
+      <p class="muted">Một vài công việc mình đã làm gần đây.</p>
+    </div>
+
+    <div class="grid cards">
+      <!-- Card 1 -->
+      <article class="card">
+        <img src="assets/project-thumb.svg" alt="Ảnh dự án" class="thumb">
+        <div class="card-body">
+          <h3>Portfolio Website</h3>
+          <p>Website cá nhân tối ưu hiệu năng, HTML/CSS gọn nhẹ, hỗ trợ dark mode.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>Responsive</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <img src="assets/project-thumb.svg" alt="Ảnh dự án" class="thumb">
+        <div class="card-body">
+          <h3>App Quản lý Công việc</h3>
+          <p>Ứng dụng web đơn giản để tạo, gán nhãn và lọc task, lưu local storage.</p>
+          <div class="tags">
+            <span>JavaScript</span><span>UI</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <img src="assets/project-thumb.svg" alt="Ảnh dự án" class="thumb">
+        <div class="card-body">
+          <h3>Dashboard Thống kê</h3>
+          <p>Thiết kế giao diện dashboard mô-đun, sẵn layout cho biểu đồ và bảng.</p>
+          <div class="tags">
+            <span>UI/UX</span><span>Design</span>
+          </div>
+          <div class="card-actions">
+            <a class="btn small" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="btn small ghost" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="section-head">
+      <h2>Kinh nghiệm</h2>
+      <p class="muted">Một số vị trí & trách nhiệm chính.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Công ty ABC — Frontend</h3>
+          <span class="t-time">2023 — Nay</span>
+          <p>Phát triển giao diện web, tối ưu hiệu năng, làm việc với nhóm thiết kế.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <h3>Freelance — Web Designer</h3>
+          <span class="t-time">2021 — 2023</span>
+          <p>Thiết kế và triển khai website tĩnh, landing page cho SMEs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-head">
+      <h2>Kỹ năng</h2>
+      <p class="muted">Công cụ & công nghệ thường dùng.</p>
+    </div>
+    <div class="chips">
+      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>Figma</span><span>Responsive</span><span>Accessibility</span>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-head">
+      <h2>Liên hệ</h2>
+      <p class="muted">Luôn sẵn lòng cho cơ hội hợp tác mới.</p>
+    </div>
+
+    <div class="contact">
+      <a class="btn primary" href="mailto:thanhtrang.huynh146@gmail.com">Gửi email</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/httrang146">GitHub</a>
+      <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Trang Huỳnh · Made with ❤️</p>
+</footer>
+</body>
 </html>
