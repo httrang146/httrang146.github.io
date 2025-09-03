@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Passion One:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/app.js"></script>
 </head>
@@ -22,10 +23,10 @@
     <span>Trang Huỳnh</span>
   </a>
   <nav class="nav">
-    <a href="#projects">Dự án</a>
-    <a href="#experience">Kinh nghiệm</a>
-    <a href="#skills">Kỹ năng</a>
-    <a href="#contact">Liên hệ</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
   <button class="theme-toggle" aria-label="Đổi giao diện" title="Đổi giao diện">🌓</button>
 </header>
@@ -33,12 +34,21 @@
 <main id="home">
   <section class="hero">
     <div class="hero-text">
-      <h1>Xin chào 👋 Mình là <span class="accent">Trang Huỳnh</span></h1>
-      <p>Tập trung vào xây dựng sản phẩm gọn nhẹ, dễ dùng. Đây là portfolio nơi mình tổng hợp những dự án tiêu biểu, kỹ năng và cách liên hệ.</p>
+      <h1>Hello 👋</h1>
+      <h1>I am <span class="accent">Trang Huynh</span></h1>
+      <div class="quote-box">
+        <span class="icon">🔍</span>
+        <span>Data Analyst | Business-focused | Tech-curious | Remote-ready</span>
+      </div>
+      <p>I am a Data Analyst with 5+ years experience in SCM & Logistics and marketing sectors. I often immerse myself in finding insights hidden in messy data and translate them into practical business solutions. Whether it’s analyzing sales trends or building dashboards, I aim to turn data into something useful and meaningful.</p>
+      <p>My tech stack includes SQL, Python, Power BI, Tableau, Looker, DBT, PySpark, SparkSQL, Excel, Git, all backed by a strong business-oriented mindset.</p>
+      <p>I’m currently open to remote opportunities and actively expanding my skill set toward modern data engineering tools and AI-driven analytics.</p>
+      <p>Fluent in English, working toward French fluency.</p>
       <div class="cta-row">
-        <a class="btn primary" href="#projects">Xem dự án</a>
-        <a class="btn" href="mailto:thanhtrang.huynh146@gmail.com">Email mình</a>
+        <a class="btn primary" href="#projects">My projects</a>
+        <a class="btn" href="mailto:thanhtrang.huynh146@gmail.com">Email</a>
         <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/httrang146">GitHub</a>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/tranghuynhthanh/">LinkedIn</a>
       </div>
     </div>
     <div class="hero-art">
@@ -48,8 +58,8 @@
 
   <section id="projects" class="section">
     <div class="section-head">
-      <h2>Dự án nổi bật</h2>
-      <p class="muted">Một vài công việc mình đã làm gần đây.</p>
+      <h2>My Personal Projects</h2>
+      <p class="muted">Some projects I have done recently.</p>
     </div>
 
     <div class="grid cards">
@@ -105,25 +115,47 @@
 
   <section id="experience" class="section">
     <div class="section-head">
-      <h2>Kinh nghiệm</h2>
-      <p class="muted">Một số vị trí & trách nhiệm chính.</p>
+      <h2>Work Experience</h2>
+      <p class="muted">Some of my key positions and responsibilities.</p>
     </div>
 
     <div class="timeline">
+      <!-- Card 1 -->
       <div class="t-item">
         <div class="t-dot"></div>
         <div class="t-content">
-          <h3>Công ty ABC — Frontend</h3>
-          <span class="t-time">2023 — Nay</span>
-          <p>Phát triển giao diện web, tối ưu hiệu năng, làm việc với nhóm thiết kế.</p>
+          <span class="t-time">Oct 2022 – Jul 2025</span>
+          <h3>One Mount Group — Data Analyst</h3>
+          <p class="bullet">Assist in data analysis across 2 main business units: Inventory Management and Logistics Operation, contributing to a 15% improvement in data quality, and helping generate insights that supported decision-making for business teams.</p>
+          <p class="bullet">Develop 10+ interactive dashboards using Power BI and Tableau updated from every 30 mins to every hour, delivering in-time insights into business performance for multiple departments. Offering technical assistance for data-related concerns.</p>
+          <p class="bullet">Develop OLAP model (SSAS) for inventory tracking dashboard, compiled from multiple data sources, featuring about 130 metrics. The top 3 most-viewed reports received around 1,500 daily views, contributing to an increase in productivity across 4 teams.</p>
+          <p class="bullet">Manage and uphold analytics engineering data pipelines by DBT and Airflow to ensure efficient and precise data processing; Supplyhigh-quality datasets to end-users, enabling them to address their inquiries effectively.</p>
+          <p class="bullet">Perform in-depth data analysis to formulate hypotheses and tackle business questions and projects.</p>
+          <p class="bullet">Communicate and present business performance insights to stakeholders, clarifying trends, supporting strategic decision-making.</p>
         </div>
       </div>
+      <!-- Card 2 -->
       <div class="t-item">
         <div class="t-dot"></div>
         <div class="t-content">
-          <h3>Freelance — Web Designer</h3>
-          <span class="t-time">2021 — 2023</span>
-          <p>Thiết kế và triển khai website tĩnh, landing page cho SMEs.</p>
+          <span class="t-time">Jan 2021 – Oct 2022</span>
+          <h3>AhaMove — Data Analytics Specialist</h3>
+          <p class="bullet">Implemented ETL data in PostgreSQL/Google BigQuery/Spark SQL for other teams, projects and reports.</p>
+          <p class="bullet">Engaged in projects (C2C, SAAS, AhaMart,...) to create dashboards for monitoring key metrics and analyze project data to provide recommendations for the business.</p>
+          <p class="bullet">Conducted A/B testing for marketing campaigns, leading to a 20% increase in lead conversion rates and providing actionable insights to improve campaign targeting.</p>
+          <p class="bullet">Identify fraudulent delivery activities, leading to the detection of 5% of suspicious transactions through data pattern analysis and anomaly detection.</p>
+          <p class="bullet">Provided exploratory data analysis (EDA), feature engineering, together with collaboration on data interpretation for the Data Science team for projects: credit score, ETA (Estimated Time of Arrival), route optimisation, promotion-sensitive customer segment…</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="t-item">
+        <div class="t-dot"></div>
+        <div class="t-content">
+          <span class="t-time">Mar 2020 – Jan 2021</span>
+          <h3>Officience — Data Analyst</h3>
+          <p class="bullet">Scraped different websites to get latest data for customers as requirement, using Python programming.</p>
+          <p class="bullet">Automated process of sending requests to websites and getting proposed available product options from carriers, using Python.</p>
+          <p class="bullet">Updated data into databases on MySQL, queried and transformed data as requirements.</p>
         </div>
       </div>
     </div>
@@ -131,24 +163,33 @@
 
   <section id="skills" class="section">
     <div class="section-head">
-      <h2>Kỹ năng</h2>
-      <p class="muted">Công cụ & công nghệ thường dùng.</p>
+      <h2>Skills</h2>
+      <p class="muted">Commonly used tools & technologies.</p>
     </div>
     <div class="chips">
-      <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>Figma</span><span>Responsive</span><span>Accessibility</span>
+      <span>SQL (SQL Server, MySQL, PostgreSQL)</span><span>Python</span>
+    </div>
+    <div class="chips">
+      <span>PowerBI</span><span>Tableau</span><span>Looker Studio</span><span>dbt</span><span>PySpark</span><span>SparkSQL</span>
+    </div>
+    <div class="chips">
+      <span>Excel</span><span>Google Sheet</span><span>Airflow</span><span>git</span><span>PowerPoint</span>
+    </div>
+    <div class="chips">
+      <span>Distribution (OMS, OFS)</span><span>Transportation (TMS)</span><span>Warehouse (WMS, WES)</span><span>SAP S/4HANA</span>    </div>
     </div>
   </section>
 
   <section id="contact" class="section">
     <div class="section-head">
-      <h2>Liên hệ</h2>
-      <p class="muted">Luôn sẵn lòng cho cơ hội hợp tác mới.</p>
+      <h2>Contact</h2>
+      <p class="muted">Always open to new cooperation and learning opportunities.</p>
     </div>
 
     <div class="contact">
-      <a class="btn primary" href="mailto:thanhtrang.huynh146@gmail.com">Gửi email</a>
-      <a class="btn ghost" target="_blank" rel="noopener" href="https://github.com/httrang146">GitHub</a>
-      <a class="btn ghost" target="_blank" rel="noopener" href="https://www.linkedin.com/">LinkedIn</a>
+      <a class="btn primary" href="mailto:httrang146@gmail.com">Email</a>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://github.com/httrang146">GitHub</a>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://www.linkedin.com/tranghuynhthanh/">LinkedIn</a>
     </div>
   </section>
 </main>

@@ -25,11 +25,11 @@
 }
 
 [data-theme="light"]{
-  --bg: #f7f7fb;
+  --bg: #ffffff;
   --surface: #ffffff;
   --text: #16181d;
   --muted: #60646c;
-  --primary: #6c5ce7;
+  --primary: #237BA0;
   --primary-700:#5d4fe0;
   --border: #eaeaf2;
   --card: #ffffff;
@@ -47,16 +47,16 @@ body{
 
 /* Layout */
 .site-header{
-  position: sticky; top:0; z-index:10;
+  position: static; top:0; z-index:10;
   display:flex; align-items:center; justify-content:space-between;
-  gap:12px; padding:14px 20px; background:rgba(20,22,27,.6);
+  gap:12px; padding:14px 20px; background:#f5f5f5;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
-.logo{display:flex; align-items:center; gap:10px; color:var(--text); text-decoration:none; font-weight:700}
+.logo{display:flex; align-items:center; gap:10px; color:#237BA0; text-decoration:none; font-weight:700}
 .avatar{width:32px; height:32px; border-radius:50%; border:2px solid var(--border)}
-.nav a{color:var(--muted); text-decoration:none; margin:0 10px; font-weight:600}
-.nav a:hover{color:var(--text)}
+.nav a{color:#237BA0; text-decoration:none; margin:0 10px; font-weight:600}
+.nav a:hover{color:#69C1C0}
 .theme-toggle{background:transparent; border:1px solid var(--border); color:var(--text); padding:8px 10px; border-radius:10px; cursor:pointer}
 
 .hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:40px; padding:56px 20px; max-width:1080px; margin:0 auto}
@@ -66,16 +66,43 @@ body{
 .cta-row{display:flex; gap:12px; flex-wrap:wrap}
 .btn{display:inline-flex; align-items:center; justify-content:center; padding:10px 16px; border-radius:12px; border:1px solid var(--border); text-decoration:none; color:var(--text); font-weight:600; box-shadow: var(--shadow)}
 .btn:hover{transform: translateY(-1px)}
-.btn.primary{background: var(--primary); border-color: transparent; color:#fff}
-.btn.primary:hover{background: var(--primary-700)}
+.btn.primary{background: var(--primary); border-color: transparent; color:#EBF2C3}
+.btn.primary:hover{background: #69C1C0}
 .btn.ghost{background: transparent}
 .btn.small{padding:8px 12px; font-size:14px; box-shadow:none}
 
-.hero-art img{width:100%; height:400px; object-fit: cover; object-position: top; border-radius:16px; border:1px solid var(--border)}
+.hero-art img{max-width:400px; height:400px; transform: translateY(50px); object-fit: cover; object-position: top}
+
+.quote-box {
+  display: inline-flex;       /* nằm ngang icon + text */
+  align-items: center;
+  gap: 10px;                   /* khoảng cách giữa icon và text */
+  background: #f5f5f5;        /* xám nhẹ */
+  padding: 10px 14px;
+  border-radius: 12px;        /* bo tròn */
+  font-size: 15px;
+  color: #333;
+}
+
+.quote-box .icon {
+  font-size: 18px;            /* chỉnh kích thước icon */
+}
+
+.bullet {
+  position: relative;
+  padding-left: 1.5em;
+}
+.bullet::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #555;  /* màu bullet */
+}
+
 
 .section{padding:56px 20px}
 .section-head{max-width:1080px; margin:0 auto 20px}
-.section-head h2{font-size:28px; margin:0 0 6px}
+.section-head h2{font-size:40px; margin:0 0 6px; color: #237BA0; font-family: 'Passion One', serif;}
 .muted{color:var(--muted)}
 
 .grid.cards{
@@ -96,6 +123,7 @@ body{
 .t-dot{width:12px; height:12px; border-radius:50%; background:var(--primary); box-shadow:0 0 0 4px rgba(124,92,255,.15); margin-top:8px}
 .t-content{background: var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 16px; box-shadow: var(--shadow)}
 .t-time{color:var(--muted); font-size:14px}
+
 
 .chips{max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; gap:10px}
 .chips span{border:1px solid var(--border); padding:8px 12px; border-radius:999px; background:var(--surface)}
