@@ -12,11 +12,13 @@
 }
 @media (prefers-color-scheme: light){
   :root{
-    --bg: #f7f7fb;
+    --bg: #034460;
     --surface: #ffffff;
-    --text: #16181d;
-    --muted: #60646c;
-    --primary: #6c5ce7;
+    --text: #ffffff;
+    --text-header: #ffffff;
+    --muted: #ffffff;
+    --box-text: #60646c;
+    --primary: #237BA0; 
     --primary-700:#5d4fe0;
     --border: #eaeaf2;
     --card: #ffffff;
@@ -28,7 +30,9 @@
   --bg: #ffffff;
   --surface: #ffffff;
   --text: #16181d;
+  --text-header: #237BA0;
   --muted: #60646c;
+  --box-text: #60646c;
   --primary: #237BA0;
   --primary-700:#5d4fe0;
   --border: #eaeaf2;
@@ -59,34 +63,50 @@ body{
 .nav a:hover{color:#69C1C0}
 .theme-toggle{background:transparent; border:1px solid var(--border); color:var(--text); padding:8px 10px; border-radius:10px; cursor:pointer}
 
-.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:40px; padding:56px 20px; max-width:1080px; margin:0 auto}
-.hero-text h1{font-size:40px; line-height:1.2; margin:0 0 10px}
-.accent{color: var(--primary)}
-.hero-text p{color: var(--muted); margin:0 0 22px}
-.cta-row{display:flex; gap:12px; flex-wrap:wrap}
-.btn{display:inline-flex; align-items:center; justify-content:center; padding:10px 16px; border-radius:12px; border:1px solid var(--border); text-decoration:none; color:var(--text); font-weight:600; box-shadow: var(--shadow)}
-.btn:hover{transform: translateY(-1px)}
-.btn.primary{background: var(--primary); border-color: transparent; color:#EBF2C3}
-.btn.primary:hover{background: #69C1C0}
-.btn.ghost{background: transparent}
-.btn.small{padding:8px 12px; font-size:14px; box-shadow:none}
-
-.hero-art img{max-width:400px; height:400px; transform: translateY(50px); object-fit: cover; object-position: top}
-
-.quote-box {
-  display: inline-flex;       /* nằm ngang icon + text */
+.hero {width: 100%; background: #ffffff}
+.hero-inner{
+  max-width: 1200px;         /* khung nội dung */
+  margin: 0 auto;
+  padding: 64px 32px;        /* đệm 2 bên để text không chạm mép */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 460px); /* text | image */
+  gap: 56px;                 /* khoảng cách 2 cột */
   align-items: center;
-  gap: 10px;                   /* khoảng cách giữa icon và text */
-  background: #f5f5f5;        /* xám nhẹ */
-  padding: 10px 14px;
-  border-radius: 12px;        /* bo tròn */
-  font-size: 15px;
-  color: #333;
 }
 
-.quote-box .icon {
-  font-size: 18px;            /* chỉnh kích thước icon */
+.hero-text, .hero-art{ min-width: 0; }
+.hero-text p{ margin: 0 0 18px; color: var(--box-text,#5d6773); }
+.hero-text h1{font-size:40px; line-height:1.2; margin:0 0 10px; color: #16181d}
+.accent{color: #237BA0}
+.hero-text p{color: var(--box-text); margin:0 0 22px}
+
+.cta-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:10px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 18px; border-radius:12px; border:1px solid #e6e6e6;
+      text-decoration:none; font-weight:700; color:#134b5f; background:#fff;
+      box-shadow: 0 10px 30px rgba(0,0,0,.06); }
+.btn.primary{ background:#0f6b82; color:#fff; border-color:transparent }
+.btn.primary:hover{ filter:brightness(.95) ; background: #69C1C0}
+
+.hero-art{ display:flex; justify-content:center; }
+.hero-art img{
+  display:block;
+  width:100%; max-width: 420px; height:auto;   /* giữ tỉ lệ, không cố định height */
+  object-fit: cover; object-position: center top;
 }
+
+
+@media (max-width: 640px){
+  .hero-inner{ grid-template-columns: 1fr !important; text-align:center; }
+}
+
+.quote-box{
+  display:inline-flex; align-items:center; gap:10px;
+  background:#f2f2f2; padding:10px 14px; border-radius:14px;
+  color:#333; margin-bottom:16px;
+}
+
+.quote-box .icon {font-size: 18px;}
 
 .bullet {
   position: relative;
@@ -102,7 +122,7 @@ body{
 
 .section{padding:56px 20px}
 .section-head{max-width:1080px; margin:0 auto 20px}
-.section-head h2{font-size:40px; margin:0 0 6px; color: #237BA0; font-family: 'Passion One', serif;}
+.section-head h2{font-size:40px; margin:0 0 6px; color: var(--text-header); font-family: 'Passion One', serif;}
 .muted{color:var(--muted)}
 
 .grid.cards{
@@ -112,21 +132,21 @@ body{
 .card{grid-column: span 4; background: var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden; box-shadow: var(--shadow); display:flex; flex-direction:column}
 .card .thumb{width:100%; height:160px; object-fit:cover; background:#0f1220}
 .card-body{padding:16px}
-.card-body h3{margin:0 0 6px; font-size:20px}
-.card-body p{margin:0 0 12px; color:var(--muted)}
+.card-body h3{margin:0 0 6px; font-size:20px; color: #60646c}
+.card-body p{margin:0 0 12px; color:var(--box-text)}
 .tags{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px}
 .tags span{background:rgba(124,92,255,.15); color:#cbbcff; padding:4px 8px; border-radius:999px; border:1px solid var(--border); font-size:12px}
 .card-actions{display:flex; gap:8px; margin-top:auto}
 
 .timeline{max-width:900px; margin:0 auto; position:relative}
 .t-item{display:flex; gap:14px; margin:18px 0}
-.t-dot{width:12px; height:12px; border-radius:50%; background:var(--primary); box-shadow:0 0 0 4px rgba(124,92,255,.15); margin-top:8px}
-.t-content{background: var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 16px; box-shadow: var(--shadow)}
-.t-time{color:var(--muted); font-size:14px}
+.t-dot{width:12px; height:12px; border-radius:50%; background: #69C1C0; box-shadow:0 0 0 4px rgba(124,92,255,.15); margin-top:8px}
+.t-content{background: var(--card); border:1px solid var(--border); border-radius:14px; padding:14px 16px; box-shadow: var(--shadow); color:var(--box-text)}
+.t-time{color:var(--box-text); font-size:14px}
 
 
 .chips{max-width:900px; margin:0 auto; display:flex; flex-wrap:wrap; gap:10px}
-.chips span{border:1px solid var(--border); padding:8px 12px; border-radius:999px; background:var(--surface)}
+.chips span{border:1px solid var(--border); padding:8px 12px; border-radius:999px; background:var(--surface); color:var(--box-text)}
 
 .contact{max-width:600px; margin:0 auto; display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
 
