@@ -3,7 +3,7 @@
   --bg: #0b0c10;
   --surface: #111217;
   --text: #e6e8eb;
-  --muted: #a1a1aa;
+  --muted: #60646c;
   --primary: #7c5cff;
   --primary-700:#6a48ff;
   --border: #22232b;
@@ -28,7 +28,7 @@
 
 [data-theme="light"]{
   --bg: #ffffff;
-  --surface: #ffffff;
+  --surface: #f2f2f2;
   --text: #16181d;
   --text-header: #237BA0;
   --muted: #60646c;
@@ -47,6 +47,19 @@ body{
   background: var(--bg);
   color: var(--text);
   line-height: 1.65;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;  /* giúp chia đều khoảng cách giữa các từ */
+  line-height: 1.6;          /* tăng khoảng cách dòng cho dễ đọc */
+}
+
+li {
+  text-align: justify;
+  text-justify: inter-word;  /* giúp chia đều khoảng cách giữa các từ */
+  line-height: 1.6;          /* tăng khoảng cách dòng cho dễ đọc */
+  margin-bottom: 10px;
 }
 
 /* Layout */
@@ -163,4 +176,99 @@ body{
   .nav{display:none}
   .grid.cards{grid-template-columns: repeat(2, 1fr)}
   .card{grid-column: span 2}
+}
+
+/* --- Project info panel --- */
+.project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;   /* gap rows */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: 18px 140px 1fr;
+  column-gap: 10px;
+  align-items: start;
+  row-gap: 4px;   /* nếu label hoặc value xuống hàng thì các dòng trong cùng item cách nhau */
+}
+
+.info-item .icon{ 
+  width: 18px; 
+  text-align: center; 
+  line-height: 1; 
+}
+
+.info-item .label{
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;       /* giúp label 2 dòng gọn gàng */
+  word-break: break-word;
+}
+
+.info-item .value{
+  color: #8c8c8c;
+  line-height: 1.6;
+  margin: 0;              /* tránh bị lệch do margin mặc định của p */
+}
+
+/* Link */
+.info-item .value a{
+  color:#0b72e7;
+  text-decoration:none;
+}
+.info-item .value a:hover{ text-decoration:underline; }
+
+/* highlight */
+.highlight-red {
+  background-color: #F6D3D3; /* màu nền */
+  color: #000;               /* màu chữ */
+  padding: 2px 4px;          /* thêm chút padding */
+  border-radius: 4px;        /* bo tròn góc cho đẹp */
+}
+
+.highlight-yellow {
+  background-color: #F7EFC0; /* màu nền */
+  color: #000;               /* màu chữ */
+  padding: 2px 4px;          /* thêm chút padding */
+  border-radius: 4px;        /* bo tròn góc cho đẹp */
+}
+
+.highlight-blue {
+  background-color: #E1F3FB; /* màu nền */
+  color: #000;               /* màu chữ */
+  padding: 2px 4px;          /* thêm chút padding */
+  border-radius: 4px;        /* bo tròn góc cho đẹp */
+}
+
+.highlight-green {
+  background-color: #D3ECD2; /* màu nền */
+  color: #000;               /* màu chữ */
+  padding: 2px 4px;          /* thêm chút padding */
+  border-radius: 4px;        /* bo tròn góc cho đẹp */
+}
+
+.highlight-purple {
+  background-color: #E5D7F3; /* màu nền */
+  color: #000;               /* màu chữ */
+  padding: 2px 4px;          /* thêm chút padding */
+  border-radius: 4px;        /* bo tròn góc cho đẹp */
+}
+
+.highlight-grey {
+  background-color: #E2E7E5; /* màu nền */
+  color: #000;               /* màu chữ */
+  padding: 2px 4px;          /* thêm chút padding */
+  border-radius: 4px;        /* bo tròn góc cho đẹp */
+}
+
+/* Responsive: màn nhỏ thì xếp dọc */
+@media (max-width: 560px){
+  .info-item{
+    grid-template-columns: 18px 1fr;
+    row-gap: 6px;
+  }
+  .info-item .label{ grid-column: 2; }
+  .info-item .value{ grid-column: 2; }
 }
