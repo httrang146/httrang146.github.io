@@ -202,13 +202,13 @@ li {
 
 .info-item .label{
   font-weight: 600;
-  color: #333;
+  color: var(--text);
   line-height: 1.3;       /* giúp label 2 dòng gọn gàng */
   word-break: break-word;
 }
 
 .info-item .value{
-  color: #8c8c8c;
+  color: var(--text);
   line-height: 1.6;
   margin: 0;              /* tránh bị lệch do margin mặc định của p */
 }
